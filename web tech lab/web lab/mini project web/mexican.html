@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexican Dishes</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8; /* Light background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Dark text color */
+        }
+
+        div {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background-color: #fff; /* White background for each dish */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lift */
+            border-radius: 10px; /* Rounded corners */
+            margin-top: 20px; /* Add margin at the top */
+            overflow-x: auto; /* Enable horizontal scrolling if necessary */
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+            display: block;
+            flex: 1; /* Distribute available space evenly */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like effect */
+        }
+        a:hover {
+            transform: scale(1.05); /* Scale up on hover for a subtle effect */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like effect */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Scale up on hover for a subtle effect */
+        }
+        p {
+            margin: 8px 0;
+            color: #666; /* Slightly muted text color */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Mexican Dishes</h1>
+
+<div>
+    <a href="Tacos al Pastor.pdf" target="_blank">
+        <img src="Tacos al Pastor.jpeg" alt="Tacos al Pastor">
+        <p>Tacos al Pastor</p>
+    </a>
+    <a href="Guacamole.pdf" target="_blank">
+        <img src="Guacamole.jpeg" alt="Guacamole">
+        <p>Guacamole</p>
+    </a>
+
+    <a href="Chiles Rellenos.pdf" target="_blank">
+        <img src="Chiles Rellenos.jpeg" alt="Chiles Rellenos">
+        <p>Chiles Rellenos</p>
+    </a>
+    <a href="Mole Poblano.pdf" target="_blank">
+        <img src="Mole Poblano.jpeg" alt="Mole Poblano">
+        <p>Mole Poblano</p>
+    </a>
+    <a href="Enchiladas Rojas.pdf" target="_blank">
+        <img src="Enchiladas Rojas.jpeg" alt="Enchiladas Rojas">
+        <p>Enchiladas Rojas</p>
+    </a>
+</div>
+
+</body>
+</html>

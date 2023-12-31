@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungarian Dishes</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; 
+        }
+
+        div {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background-color: #fff; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px;
+            margin-top: 20px; 
+            overflow-x: auto; 
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+            display: block;
+            flex: 1; 
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        a:hover {
+            transform: scale(1.05); 
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1); 
+        }
+
+        
+        p {
+            margin: 8px 0;
+            color: #666; 
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hungarian Dishes</h1>
+
+<div>
+    
+    <a href="Goulash (Gulyás).pdf" target="_blank" >
+        <img src="Goulash (Gulyás).jpeg" alt="Goulash (Gulyás)">
+        <p>Goulash (Gulyás)</p><textarea placeholder="Add a review..." id="reviewGoulash"></textarea>
+        <button onclick="submitReview('Goulash')">Submit Review</button>
+    </a>
+    <a href="Chicken Paprikash.pdf" target="_blank">
+        <img src="Chicken Paprikash.jpeg" alt="Chicken Paprikash">
+        <p>Chicken Paprikash</p><textarea placeholder="Add a review..." id="reviewGoulash"></textarea>
+        <button onclick="submitReview('Goulash')">Submit Review</button>
+    </a>
+    <a href="Lángos.pdf" target="_blank">
+        <img src="Lángos.jpeg" alt="Lángos">
+        <p>Lángos</p><textarea placeholder="Add a review..." id="reviewGoulash"></textarea>
+        <button onclick="submitReview('Goulash')">Submit Review</button>
+    </a>
+    <a href="Fisherman's Soup (Halászlé).pdf" target="_blank">
+        <img src="Fisherman's Soup (Halászlé).jpeg" alt="Fisherman's Soup (Halászlé)">
+        <p>Fisherman's Soup (Halászlé)</p><textarea placeholder="Add a review..." id="reviewGoulash"></textarea>
+        <button onclick="submitReview('Goulash')">Submit Review</button>
+    </a>
+    <a href="Stuffed Peppers (Töltött Paprika).pdf" target="_blank">
+        <img src="Stuffed Peppers (Töltött Paprika).jpeg" alt="Stuffed Peppers (Töltött Paprika)">
+        <p>Stuffed Peppers (Töltött Paprika)</p><textarea placeholder="Add a review..." id="reviewGoulash"></textarea>
+        <button onclick="submitReview('Goulash')">Submit Review</button>
+    </a>
+    
+</div>
+</body>
+<script>
+    function submitReview(dishName) {
+        var review = document.getElementById('review' + dishName).value;
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'submitReview.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+        };
+        xhr.send('dish=' + dishName + '&review=' + review);
+    }
+</script>
+
+</html>

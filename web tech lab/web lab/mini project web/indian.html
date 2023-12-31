@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Dishes</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f8f8; /* Light background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333; /* Dark text color */
+        }
+
+        div {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background-color: #fff; /* White background for each dish */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for a lift */
+            border-radius: 10px; /* Rounded corners */
+            margin-top: 20px; /* Add margin at the top */
+            overflow-x: auto; /* Enable horizontal scrolling if necessary */
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+            display: block;
+            flex: 1; /* Distribute available space evenly */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like effect */
+        }
+        a:hover {
+            transform: scale(1.05); /* Scale up on hover for a subtle effect */
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for a card-like effect */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Scale up on hover for a subtle effect */
+        }
+
+        p {
+            margin: 8px 0;
+            color: #666; /* Slightly muted text color */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Indian Dishes</h1>
+
+<div>
+    <a href="Chicken Curry.pdf" target="_blank">
+        <img src="Chicken Curry.jpeg" alt="Chicken Curry">
+        <p>Chicken Curry</p>
+    </a>
+    <a href="Paneer Tikka.pdf" target="_blank">
+        <img src="Paneer Tikka.jpeg" alt="Paneer Tikka">
+        <p>Paneer Tikka</p>
+    </a>
+    <a href="Palak Paneer.pdf" target="_blank">
+        <img src="Palak Paneer.jpeg" alt="Palak Paneer">
+        <p>Palak Paneer</p>
+    </a>
+    <a href="Biryani.pdf" target="_blank">
+        <img src="Biryani.jpeg" alt="Biryani">
+        <p>Biryani</p>
+    </a>
+    <a href="Butter Chicken (Murgh Makhani).pdf" target="_blank">
+        <img src="Butter Chicken (Murgh Makhani).jpeg" alt="Butter Chicken (Murgh Makhani)">
+        <p>Butter Chicken (Murgh Makhani)</p>
+    </a>
+</div>
+
+</body>
+</html>
